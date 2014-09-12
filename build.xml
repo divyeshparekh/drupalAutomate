@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<project name="drupalAutomate" basedir="." default="usage">
+    <property file="build.properties"/>
+    <property name="source.dir" value="${basedir}"/>
+    <property name="target.dir" value="/opt/"/>  
+    <property name="name" value="drupalAutomate"/>
+    <target name="usage">
+        <echo message=""/>
+        <echo message="${name} build file"/>
+        <echo message="-----------------------------------"/>
+        <echo message=""/>
+        <echo message="Available targets are:"/>
+        <echo message=""/>
+        <echo message="deploy    --> Deploy application         "/>
+        <echo message=""/>
+    </target>
+
+   <target name="deploy" >
+        <copy todir="${target.dir}/${name}" >
+            <fileset dir="${source.dir}">
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+    </target>
+</project>
