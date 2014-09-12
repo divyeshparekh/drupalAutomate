@@ -3,7 +3,7 @@
 <project name="drupalAutomate" basedir="." default="usage">
     <property file="build.properties"/>
     <property name="source.dir" value="${basedir}"/>
-    <property name="target.dir" value="/opt/"/>  
+    <property name="target.dir" value="/var/www"/>  
     <property name="name" value="drupalAutomate"/>
     <target name="usage">
         <echo message=""/>
